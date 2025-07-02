@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1751382641588" clover="3.2.0">
-  <project timestamp="1751382641588" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1751422348816" clover="3.2.0">
+  <project timestamp="1751422348817" name="All files">
+    <metrics statements="37" coveredstatements="19" conditionals="5" coveredconditionals="1" methods="8" coveredmethods="1" elements="50" coveredelements="21" complexity="0" loc="37" ncloc="37" packages="3" files="3" classes="3"/>
+    <package name="prisma">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="client.js" path="/home/daraujo/projetosDayana/AppDayana/backEndAppDayana/prisma/client.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.controllers">
+      <metrics statements="24" coveredstatements="10" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="1"/>
+      <file name="taskController.js" path="/home/daraujo/projetosDayana/AppDayana/backEndAppDayana/src/controllers/taskController.js">
+        <metrics statements="24" coveredstatements="10" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="10" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="taskService.js" path="/home/daraujo/projetosDayana/AppDayana/backEndAppDayana/src/services/taskService.js">
+        <metrics statements="10" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
