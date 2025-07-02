@@ -5,7 +5,7 @@ const getTasks = async (req, res) => {
     const tasks = await taskService.getTasks(req.query || {});
     res.status(200).json(tasks);
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao buscar tarefas' });
+    res.status(500).json({ message: 'Error when trying to retrieve tasks' });
   }
 };
 
@@ -22,7 +22,7 @@ const createTask = async (req, res) => {
     if (error.code === 'P2002') {
       res.status(409).json({ message: 'Task name is already in use' });
     } else {
-      res.status(500).json({ message: 'Erro interno', detalhes: error.message });
+      res.status(500).json({ message: 'Internal error', detalhes: error.message });
     }
   }
 };
@@ -32,7 +32,7 @@ const toggleTask = async (req, res) => {
     const task = await taskService.toggleTask(req.params.id, req.body.completed);
     res.status(200).json(task);
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao atualizar tarefa', detalhes: error.message });
+    res.status(500).json({ message: 'Internal error', detalhes: error.message });
   }
 };
 
@@ -41,7 +41,7 @@ const deleteTask = async (req, res) => {
     await taskService.deleteTask(req.params.id);
     res.status(200).json({ deleted: true });
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao deletar tarefa', detalhes: error.message });
+    res.status(500).json({ message: 'Internal error', detalhes: error.message });
   }
 };
 

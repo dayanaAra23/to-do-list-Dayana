@@ -5,6 +5,10 @@ on:
     branches: [ '**' ]
   pull_request:
     branches: [ main ]
+  push:
+    branches:
+      - main
+
 
 jobs:
   test:
@@ -14,16 +18,16 @@ jobs:
         working-directory: backEndAppDayana
 
     steps:
-      - name: 📦 Checkout código
+      - name: 📦 Code checkout
         uses: actions/checkout@v4
 
-      - name: ⚙️ Configurar Node.js
+      - name: ⚙️ Node.js setup
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: 📥 Instalar dependências
+      - name: 📥 Installing dependencies
         run: npm install
 
-      - name: 🧪 Rodar testes com Jest
+      - name: 🧪 Run tests using jest
         run: npm test -- --coverage

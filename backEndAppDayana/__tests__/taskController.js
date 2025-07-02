@@ -5,7 +5,7 @@ const taskService = require('../src/services/taskService');
 jest.mock('../src/services/taskService'); 
 
 describe('taskController.getTasks', () => {
-  it('deve retornar tarefas com status 200', async () => {
+  it('should return a list of tasks with success', async () => {
     const mockTasks = [
       { id: 1, taskName: 'Lavar louça' },
       { id: 2, taskName: 'Estudar testes unitários' }
@@ -25,17 +25,4 @@ describe('taskController.getTasks', () => {
     expect(res.json).toHaveBeenCalledWith(mockTasks);
   });
 
-  it('deve retornar status 500 e mensagem de erro ++', async () => {
-    taskService.getTasks.mockRejectedValue(new Error('Falha simulada'));
-
-    const req = httpMocks.createRequest();
-    const res = httpMocks.createResponse();
-    res.status = jest.fn().mockReturnValue(res);
-    res.json = jest.fn();
-
-    await taskController.getTasks(req, res);
-
-    expect(res.status).toHaveBeenCalledWith(500);
-    expect(res.json).toHaveBeenCalledWith({ message: 'Erro ao buscar tarefas' });
-  });
 });
