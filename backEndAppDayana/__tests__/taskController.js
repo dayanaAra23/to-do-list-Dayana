@@ -25,7 +25,7 @@ describe('taskController.getTasks', () => {
     expect(res.json).toHaveBeenCalledWith(mockTasks);
   });
 
-  it('deve retornar status 500 e mensagem de erro +', async () => {
+  it('deve retornar status 500 e mensagem de erro ++', async () => {
     taskService.getTasks.mockRejectedValue(new Error('Falha simulada'));
 
     const req = httpMocks.createRequest();
