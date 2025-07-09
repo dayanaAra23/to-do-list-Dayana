@@ -75,7 +75,7 @@ function Home() {
           <select name='label' ref={inputLabel} data-testid='label'>
             <option value="">Select a task label</option>
             <option value="Personal">Personal</option>
-            <option value="Work">Work</option>
+            <option value="Work">Work</option>  
             <option value="Buy">Buy</option>
             <option value="Study">Study</option>
             <option value="Seicho">Seicho</option>
@@ -98,7 +98,8 @@ function Home() {
                   <span className="slider round"></span>
                 </label>
                 <p>Task name: <span>{task.taskName}</span></p>
-                <p>Due date: <span>{task.dueDate.slice(0, 10).split('-').reverse().join('/')}</span></p>                <p>Description: <span>{task.description}</span></p>
+                <p>Due date: <span>{task.dueDate.slice(0, 10).split('-').reverse().join('/')}</span></p>                
+                <p>Description: <span>{task.description}</span></p>
                 <p>Label: <span>{task.label}</span></p>
                 <button onClick={() => deleteTasks(task.id)}>
                   <img src={Trash} />
